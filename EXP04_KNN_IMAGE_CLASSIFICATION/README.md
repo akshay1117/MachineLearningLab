@@ -62,21 +62,14 @@ When you run the program, the console will output:
 - A detailed classification report showing precision, recall, and f1-score for each clothing category.
 - A visualization window showing a confusion matrix on top, and 5 actual clothing images with their predicted text underneath.
 
-## Viva Questions
-
-1. **Why is KNN called a "lazy" learner?**
-   *Because it does not build a mathematical model during the training phase. It simply stores the data and defers all the heavy computation until prediction time.*
-2. **Why do we normalize the image pixel values by dividing by 255?**
-   *To scale features between 0 and 1. Distance metrics are highly sensitive to the scale of features. Though all pixels share the same scale (0-255), standardizing to [0,1] is a standard best practice in ML that prevents numeric overflow and speeds up calculation.*
-3. **How is the distance between two images calculated in KNN?**
-   *The images are flattened into vectors. The algorithm then calculates the Euclidean distance by summing the squared differences between corresponding pixels of the two images.*
-4. **What happens if we choose K = 1?**
-   *The model becomes highly sensitive to noise. It will look only at the single closest image. It might overfit.*
-5. **Why did we use a subset of the dataset?**
-   *Because calculating the distance from one test image to 60,000 training images is computationally expensive. Doing this for 10,000 test images takes a very long time on a standard CPU.*
-
-## Key Learning Points
-
-- How to preprocess 2D image data for traditional 1D Machine Learning models.
-- The difference between eager learning (like Logistic Regression) and lazy learning (KNN).
-- The tradeoff between data size and computational speed in distance-based algorithms.
+## Viva Questions & Answers
+1. **How does the K-Nearest Neighbors (KNN) algorithm work?**
+   **Answer:** KNN classifies a new data point based on the majority class among its 'K' closest neighbors in the feature space, calculated using a distance metric.
+2. **What is the significance of the value 'K' in KNN?**
+   **Answer:** 'K' determines how many neighbors influence the classification. It controls the bias-variance tradeoff: a small K is noisy and prone to overfitting, while a large K smooths decision boundaries but might underfit.
+3. **What happens if K is too small or too large?**
+   **Answer:** If K is too small (e.g., K=1), the model overfits and is sensitive to noise. If K is too large, the model underfits and the majority class in the entire dataset may dominate predictions.
+4. **Why is feature scaling (normalization/standardization) extremely important for KNN?**
+   **Answer:** Because KNN relies on distance metrics (like Euclidean distance). Features with larger numerical ranges will dominate the distance calculation if scaling is not applied.
+5. **What distance metrics can be used in KNN?**
+   **Answer:** Common distance metrics include Euclidean distance (L2 norm), Manhattan distance (L1 norm), and Minkowski distance.

@@ -60,22 +60,14 @@ When you run the program, the console will output:
 - The evaluation metrics (Accuracy, Classification Report).
 - A matplotlib window showing a Confusion Matrix and a visual representation of the Decision Tree itself, where you can see the exact thresholds (e.g., `NumTransactions <= 2.5`) used to split the customers.
 
-## Viva Questions
-
-1. **What is Entropy in the context of Decision Trees?**
-   *Entropy measures the impurity or disorder of a set of examples. A node with all items belonging to one class has an entropy of 0. A node with an equal mix of classes has high entropy.*
-2. **What is Information Gain?**
-   *It is the difference in entropy before and after a split. The tree chooses the feature that maximizes Information Gain.*
-3. **Why did we have to engineer features for this dataset?**
-   *Because the original dataset is transactional (one row per item). We want to classify *customers*, so we must aggregate the transactions into customer-level features.*
-4. **What is overfitting in Decision Trees and how do we prevent it?**
-   *Overfitting happens when a tree grows too deep and memorizes noise in the training data. We prevent it by "pruning", which can be done by setting a `max_depth` or minimum samples per leaf.*
-5. **What is the root node of the tree?**
-   *The very top node, which represents the single most important feature used for the first split of the entire dataset.*
-
-## Key Learning Points
-
-- Handling real-world transactional data by aggregating it (Feature Engineering).
-- Constructing a meaningful target variable from raw continuous data.
-- Understanding how a Decision Tree logically splits data to make a classification.
-- Using `plot_tree` to visually interpret the model.
+## Viva Questions & Answers
+1. **What is a Decision Tree and how does it make predictions?**
+   **Answer:** A Decision Tree is a flowchart-like model that splits data into branches based on feature conditions, eventually reaching a leaf node that represents the predicted class or value.
+2. **Explain Entropy and Information Gain.**
+   **Answer:** Entropy is a measure of randomness or impurity in a dataset. Information Gain is the reduction in entropy achieved by splitting the data on a specific feature. The tree uses it to choose the best splitting feature.
+3. **What is Gini Impurity?**
+   **Answer:** Gini impurity measures the frequency at which a randomly chosen element would be incorrectly labeled if it was randomly labeled according to the distribution of labels in the node. It is an alternative to entropy for evaluating splits.
+4. **How does a decision tree handle overfitting? What is pruning?**
+   **Answer:** Decision trees easily overfit by growing too deep. Pruning is a technique to reduce overfitting by removing branches (nodes) that have little importance or provide little predictive power, simplifying the tree.
+5. **What are the main advantages and disadvantages of Decision Trees?**
+   **Answer:** **Advantages:** Easy to interpret, visualizable, and requires little data preprocessing (no scaling needed). **Disadvantages:** Highly prone to overfitting, sensitive to small variations in data, and can create biased trees if classes are imbalanced.

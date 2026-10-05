@@ -59,21 +59,14 @@ When you run the program, the console will output:
 - Evaluation Metrics: Inertia and Silhouette Score.
 - A visualization window showing two PCA-reduced scatter plots. You should notice that the visual groupings the K-Means algorithm discovered (left) closely match the actual true categories of the digits (right).
 
-## Viva Questions
-
-1. **What is the difference between K-Means and KNN?**
-   *K-Means is an unsupervised clustering algorithm that finds hidden groups in data. KNN is a supervised classification algorithm that assigns a label to a new point based on its closest known neighbors.*
-2. **What does 'K' stand for in K-Means?**
-   *K represents the number of clusters (and therefore the number of centroids) the algorithm should find.*
-3. **What is Inertia in K-Means?**
-   *Inertia is the sum of squared distances of all data points to their respective cluster centroids. The algorithm tries to minimize this value.*
-4. **Why did we use PCA in this experiment?**
-   *The data has 64 dimensions. We used Principal Component Analysis (PCA) strictly to reduce those 64 dimensions down to 2 dimensions so we could plot it on a standard 2D graph.*
-5. **How would you determine the best 'K' if you didn't know it was 10?**
-   *By using the Elbow Method: running K-Means for a range of K values, plotting their Inertia, and looking for the "elbow" point where the decrease in inertia sharply levels off.*
-
-## Key Learning Points
-
-- The fundamental difference between supervised and unsupervised learning.
-- How K-Means iteratively updates centroids.
-- Using PCA as a tool for visualizing high-dimensional data.
+## Viva Questions & Answers
+1. **How does the K-Means clustering algorithm work?**
+   **Answer:** It randomly initializes K cluster centroids, assigns each data point to the nearest centroid, and then recalculates the centroids as the mean of the assigned points. This process repeats until convergence.
+2. **How do you determine the optimal number of clusters (K)?**
+   **Answer:** Common methods include the Elbow Method (looking for an inflection point in the inertia plot) and Silhouette Analysis (maximizing the Silhouette score).
+3. **What is the Elbow Method?**
+   **Answer:** A heuristic used to find optimal K by plotting the sum of squared distances (Inertia) against K. The 'elbow' point where the rate of decrease sharply slows down indicates a good choice for K.
+4. **Explain the Silhouette Score.**
+   **Answer:** It measures how similar an object is to its own cluster (cohesion) compared to other clusters (separation). It ranges from -1 to 1, where a higher score indicates better-defined and well-separated clusters.
+5. **Does K-Means always guarantee finding the global optimum? Why or why not?**
+   **Answer:** No, it does not guarantee a global optimum. It converges to a local optimum depending on the initial random placement of centroids. Running it multiple times with different initializations (like k-means++) helps mitigate this.

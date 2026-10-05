@@ -60,21 +60,14 @@ When you run the program, the console will print:
 - You will see that Polynomial Regression generally yields a higher R² score.
 - A visualization window showing the actual data points, the straight linear regression line (blue), and the curved polynomial regression line (red).
 
-## Viva Questions
-
-1. **Is Polynomial Regression a linear or non-linear model?**
-   *It is a linear model. Although it fits a non-linear curve to the data, the model itself is linear with respect to its coefficients (b₀, b₁, b₂).*
-2. **What does `degree` mean in polynomial regression?**
-   *The degree is the maximum power of the independent variable. Degree 2 creates `x²`, degree 3 creates `x²` and `x³`, etc.*
-3. **What happens if the degree is set too high (e.g., degree=15)?**
-   *The model will suffer from **overfitting**. It will pass exactly through the training points but perform terribly on new test data, resulting in a wildly fluctuating curve.*
-4. **Why did we sort the test data before plotting?**
-   *If we plot a line between unsorted points, matplotlib will draw zigzag lines all over the plot connecting points in their random order. Sorting `X` ensures the line draws smoothly from left to right.*
-5. **How does Polynomial Regression improve the Auto MPG prediction?**
-   *The relationship between car weight and MPG is non-linear (an inverse curve). Polynomial regression captures this curve, reducing the error (MSE) compared to a straight line.*
-
-## Key Learning Points
-
-- Standard linear models can learn non-linear patterns if we apply feature transformations.
-- Comparing models using R² and MSE.
-- The concept of underfitting (when a straight line fails to capture a curved trend).
+## Viva Questions & Answers
+1. **When should you use Polynomial Regression instead of Linear Regression?**
+   **Answer:** When the relationship between the independent and dependent variables is non-linear and cannot be captured adequately by a straight line.
+2. **Does Polynomial Regression remain a linear model? Why?**
+   **Answer:** Yes, it is still considered a linear regression model because it is linear in the parameters (weights/coefficients), even though it fits a non-linear curve to the input features.
+3. **What is the risk of using a very high degree for the polynomial?**
+   **Answer:** Using a very high degree makes the model highly complex, causing it to fit the training data's noise (overfitting), leading to poor generalization on unseen test data.
+4. **How do you decide the optimal degree of the polynomial?**
+   **Answer:** By testing different degrees and using a validation set or cross-validation. You choose the degree that minimizes validation error and provides a good balance between bias and variance.
+5. **What does the term "overfitting" mean in this context?**
+   **Answer:** Overfitting occurs when the polynomial curve tries to pass through or extremely close to every training data point, capturing noise rather than the underlying trend, resulting in high variance.

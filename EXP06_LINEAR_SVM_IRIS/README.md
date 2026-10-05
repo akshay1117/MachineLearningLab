@@ -56,21 +56,14 @@ When you run the program, the console will output:
   - A Confusion Matrix.
   - A beautiful 2D Decision Boundary plot where the background color represents the model's classification zones, and the dots represent the actual flower samples.
 
-## Viva Questions
-
-1. **What is a Support Vector?**
-   *Support vectors are the specific data points that lie closest to the decision boundary. They are the most difficult to classify and essentially define the margin.*
-2. **Why is feature scaling crucial for SVM?**
-   *SVM tries to maximize the geometric distance between classes. If one feature is measured in thousands and another in decimals, the larger feature will completely dominate the distance calculation, making the SVM ineffective.*
-3. **What is a Hyperplane?**
-   *A hyperplane is a decision boundary. In 2D, it is a line. In 3D, it is a flat plane. In n-dimensions, it is an (n-1) dimensional flat subspace.*
-4. **What does the 'linear' kernel do?**
-   *It attempts to separate the data using a perfectly straight line/plane without mathematically transforming the input space into higher dimensions.*
-5. **What is a "Hard Margin" vs "Soft Margin"?**
-   *A hard margin allows absolutely no misclassifications in the training data (which can lead to overfitting). A soft margin allows some misclassifications or points inside the margin to create a more generalized boundary. This tradeoff is controlled by the `C` parameter in sklearn.*
-
-## Key Learning Points
-
-- How SVM works by maximizing the margin.
-- The absolute necessity of standardizing data for distance/margin-based algorithms.
-- How to visualize a classification boundary using `numpy.meshgrid`.
+## Viva Questions & Answers
+1. **What is the main objective of a Support Vector Machine (SVM)?**
+   **Answer:** To find the optimal hyperplane in an N-dimensional space that maximizes the margin (distance) between different classes, ensuring the best possible separation.
+2. **What are Support Vectors?**
+   **Answer:** Support vectors are the data points that lie closest to the decision surface (hyperplane). They are the most critical points because they dictate the position and orientation of the hyperplane.
+3. **What is a hyperplane and what is a margin in SVM?**
+   **Answer:** A hyperplane is the decision boundary separating classes. The margin is the distance between the hyperplane and the closest data points (support vectors) from either class. SVM aims to maximize this margin.
+4. **How does the 'C' regularization parameter affect the SVM model?**
+   **Answer:** 'C' dictates the trade-off between maximizing the margin and minimizing classification errors. A high 'C' strictly penalizes misclassifications (smaller margin, potential overfitting). A low 'C' allows a wider margin with some misclassifications (potential underfitting).
+5. **What is the Kernel Trick and when is it used?**
+   **Answer:** The Kernel Trick is a mathematical technique used to implicitly map non-linearly separable data into a higher-dimensional space where it becomes linearly separable, without explicitly computing the coordinates in that space.

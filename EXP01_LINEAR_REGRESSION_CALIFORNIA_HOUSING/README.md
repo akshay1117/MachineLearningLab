@@ -64,21 +64,14 @@ When you run the program, the console will print:
 - Evaluation metrics (MAE, MSE, RMSE, R²).
 - A matplotlib window will open showing a scatter plot of the data points in blue and the predicted straight regression line in red.
 
-## Viva Questions
-
-1. **What is the difference between simple and multiple linear regression?**
-   *Simple linear regression uses one independent variable. Multiple linear regression uses two or more.*
-2. **What does the R² (R-squared) score indicate?**
-   *It indicates the proportion of the variance in the dependent variable that is predictable from the independent variable. A score of 1.0 means perfect prediction.*
-3. **Why do we split the dataset into train and test sets?**
-   *To evaluate the model's performance on unseen data, which helps verify that the model hasn't just memorized the training data (overfitting).*
-4. **What is Mean Squared Error (MSE)?**
-   *It is the average of the squared differences between the predicted and actual values.*
-5. **What is the significance of the slope (`b₁`) in our equation?**
-   *It shows how much the house value increases for every one-unit increase in median income.*
-
-## Key Learning Points
-
-- How to extract a single column to perform univariate regression.
-- How to interpret the mathematical equation of the trained model.
-- How to visualize a best-fit regression line over a scatter plot.
+## Viva Questions & Answers
+1. **What is the objective of Linear Regression?**
+   **Answer:** To model the relationship between a dependent variable (target) and one or more independent variables (features) by fitting a linear equation to observed data.
+2. **Explain the difference between Simple and Multiple Linear Regression.**
+   **Answer:** Simple linear regression uses a single independent variable to predict the target, whereas multiple linear regression uses two or more independent variables.
+3. **What is the cost function (e.g., Mean Squared Error) in Linear Regression?**
+   **Answer:** Typically, Mean Squared Error (MSE), which measures the average squared difference between the predicted values and the actual target values. The goal is to minimize this cost function.
+4. **What is Gradient Descent and why is it used?**
+   **Answer:** It is an optimization algorithm used to iteratively minimize the cost function by adjusting the model's parameters (weights and bias) in the direction of the steepest descent (negative gradient).
+5. **How do you interpret the R-squared value?**
+   **Answer:** R-squared (Coefficient of Determination) represents the proportion of the variance in the dependent variable that is predictable from the independent variable(s). A higher R-squared (closer to 1) indicates a better fit.

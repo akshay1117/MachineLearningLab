@@ -58,21 +58,14 @@ When you run the program, the console will output:
 - An example prediction showing the raw patient data, the calculated probability, the model's prediction, and the actual outcome.
 - Two visualizations will appear side-by-side: a Confusion Matrix heatmap and an ROC Curve.
 
-## Viva Questions
-
-1. **Why is it called Logistic Regression if it's used for classification?**
-   *Because the core math calculates a continuous value (similar to linear regression), but it is then passed through a logistic (sigmoid) function to map it to a probability.*
-2. **What is the range of the Sigmoid function?**
-   *Between 0 and 1.*
-3. **What does a Confusion Matrix show?**
-   *It shows the counts of True Positives, True Negatives, False Positives, and False Negatives, giving a detailed breakdown of how the model is confusing classes.*
-4. **Why do we need feature scaling before Logistic Regression?**
-   *Logistic regression uses optimization solvers like gradient descent. Features on vastly different scales can cause the optimizer to take much longer to converge or fail to find the optimal solution.*
-5. **What does AUC mean in an ROC curve?**
-   *Area Under the Curve. An AUC of 0.5 means the model is guessing randomly, while an AUC of 1.0 represents a perfect classifier.*
-
-## Key Learning Points
-
-- Understanding the difference between regression (predicting a continuous number) and classification (predicting a discrete category).
-- Data imputation strategies (e.g., replacing zeroes with medians).
-- How to evaluate a classifier beyond simple accuracy using Precision, Recall, and ROC curves.
+## Viva Questions & Answers
+1. **Why is Logistic Regression used for classification instead of Linear Regression?**
+   **Answer:** Linear regression outputs continuous values that can be < 0 or > 1, and is highly sensitive to outliers. Logistic regression uses a sigmoid function to bound predictions between 0 and 1, making it ideal for probabilities and classification.
+2. **What is the Sigmoid function and what is its output range?**
+   **Answer:** The sigmoid function is an S-shaped curve defined as `1 / (1 + e^-x)`. It maps any real-valued number into a range between 0 and 1.
+3. **What is the difference between a False Positive and a False Negative?**
+   **Answer:** A False Positive is when the model predicts the positive class but the actual class is negative (Type I error). A False Negative is predicting the negative class when the actual class is positive (Type II error).
+4. **Explain Precision, Recall, and F1-Score.**
+   **Answer:** Precision is the ratio of true positives to total predicted positives (accuracy of positive predictions). Recall is the ratio of true positives to actual positives (ability to find all positive instances). F1-Score is the harmonic mean of Precision and Recall.
+5. **What is the role of the decision threshold in Logistic Regression?**
+   **Answer:** The decision threshold (usually 0.5) converts the predicted probability into a discrete class label. Probabilities above the threshold are assigned to the positive class (1), and below to the negative class (0).

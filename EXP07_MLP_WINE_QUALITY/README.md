@@ -60,22 +60,14 @@ When you run the program, the console will output:
 - Final Test Accuracy and Classification Report.
 - A matplotlib window showing three plots: Model Accuracy curve, Model Loss curve, and a Confusion Matrix.
 
-## Viva Questions
-
-1. **What is an Epoch?**
-   *One epoch means the neural network has processed the entire training dataset one full time.*
-2. **What does the activation function do?**
-   *It introduces non-linearity into the network. Without activation functions, an MLP would mathematically collapse into a simple linear regression model, regardless of how many layers it has.*
-3. **Why did we use Sigmoid in the output layer?**
-   *Because we are solving a binary classification problem. Sigmoid squashes the network's raw output into a probability between 0.0 and 1.0.*
-4. **Why is feature scaling essential for neural networks?**
-   *Features on vastly different scales cause the loss landscape to become highly distorted, which makes gradient descent slow, unstable, and sometimes unable to converge to a solution.*
-5. **How can you tell from the plots if a model is overfitting?**
-   *If the Training Accuracy keeps increasing while the Validation Accuracy plateaus or starts decreasing (or similarly for loss), the model is memorizing the training data rather than generalizing.*
-
-## Key Learning Points
-
-- How to architect a basic Neural Network using Keras.
-- Formulating a custom classification problem from raw scores.
-- Understanding the training loop (epochs, batch size, validation split).
-- Interpreting accuracy and loss curves.
+## Viva Questions & Answers
+1. **What is a Multilayer Perceptron (MLP)?**
+   **Answer:** An MLP is a class of feedforward artificial neural network consisting of at least three layers of nodes: an input layer, one or more hidden layers, and an output layer, utilizing non-linear activation functions.
+2. **What is the role of activation functions in a neural network?**
+   **Answer:** They introduce non-linearity into the network, allowing it to learn and model complex, non-linear relationships in the data. Without them, the network would essentially behave like a single-layer linear model.
+3. **Explain the concept of forward propagation and backpropagation.**
+   **Answer:** Forward propagation is the process of passing input data through the network layers to calculate a prediction and loss. Backpropagation calculates the gradient of the loss function with respect to weights and updates them to minimize the error.
+4. **What is the difference between a hidden layer and an output layer?**
+   **Answer:** Hidden layers reside between the input and output layers, learning intermediate representations and features. The output layer produces the final prediction or classification probabilities based on the hidden layers' outputs.
+5. **How does the learning rate affect the training of an MLP?**
+   **Answer:** The learning rate controls the step size during weight updates. A rate too large causes training to diverge or oscillate, while a rate too small makes training extremely slow and prone to getting stuck in local minima.
