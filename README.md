@@ -51,12 +51,14 @@ This repository contains clean, student-friendly, and executable Python implemen
 | 6 | [Linear Support Vector Machine](EXP06_LINEAR_SVM_IRIS/) | Linear SVM | Iris |
 | 7 | [Multilayer Feed Forward Network](EXP07_MLP_WINE_QUALITY/) | Artificial Neural Network (MLP) | Wine Quality |
 | 8 | [K-Means Clustering](EXP08_KMEANS_DIGITS/) | K-Means | Digits |
+| 9 | [Resampling Methods (Bootstrapping & Cross-Validation)](EXP09_BOOTSTRAP_CROSS_VALIDATION_IRIS/) | Bootstrapping & Stratified K-Fold CV | Iris |
+| 10 | [Ensemble Learning (Bagging & Boosting)](EXP10_BAGGING_BOOSTING_TITANIC/) | Bagging & AdaBoost | Titanic |
 
 ## 📊 Dataset Instructions
 
-Most experiments in this repository use datasets built into `scikit-learn` or `keras` which will download automatically when you run the code.
+Most experiments in this repository use datasets built into `scikit-learn`, `seaborn`, or `keras` which will download automatically when you run the code.
 
-However, some experiments require you to download external datasets (e.g., Auto MPG, Pima Indians Diabetes, Online Retail, Wine Quality).
+However, some experiments require external datasets (e.g., Auto MPG, Pima Indians Diabetes, Online Retail, Wine Quality, Titanic).
 
 - Check the `README.md` inside each experiment's folder for exact dataset download links.
 - Place the downloaded `.csv` or `.xlsx` files inside a `data/` folder in the root directory, or next to the scripts as specified in each experiment.
